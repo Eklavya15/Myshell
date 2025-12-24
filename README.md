@@ -1,42 +1,39 @@
-# 🐚 MiniShell – A Simple Unix-like Shell in C
+MyShell – Custom Command-Line Shell in C
+Overview
 
-A basic Unix shell written in C that reads user input, tokenizes it, and executes commands using `fork()` and `execvp()`.
+MyShell is a custom command-line shell implemented in C to understand low-level operating system concepts such as process creation, command execution, and interaction with the system environment. The project focuses on how a shell parses user input and executes commands using system-level primitives.
 
-## ✅ Features
+This project is built as part of an Operating Systems and Systems Programming learning journey, emphasizing clarity and correctness over feature bloat.
 
-- Custom shell prompt: `minishell>`
-- Runs system commands like `ls`, `pwd`, `echo`, `cat`, etc.
-- Command parsing with `strtok()`
-- Process creation with `fork()`
-- Command execution using `execvp()`
-- Gracefully handles `Ctrl+D` and `exit` command
+Features
 
-## 🧪 Sample Usage
+Custom shell prompt implementation
 
-```bash
-minishell> ls
-minishell> echo Hello World
-minishell> exit
+Executes basic system commands
 
-🛠 How to Run
-gcc shell.c -o minishell
-./minishell
+Command parsing and input handling
 
-📌 Notes
-Works on Linux/Unix systems
+Uses system-level calls for process execution
 
-Supports only basic commands currently
+Boot-related assembly artifacts included for experimentation
 
-No piping (|) or redirection (>, <) yet
+Windows batch file for easy execution
 
-🚧 Coming Soon
-Input/output redirection
+Tech Stack
 
-Background execution with &
+Language: C
 
-Built-in commands like cd, clear
+Assembly: x86 Assembly (boot-related files)
 
-Colored output for child/parent separation
+Platform: Windows
 
-👩‍💻 Author
-Eklavya Jha
+Tools: GCC / MinGW, Batch scripting
+
+Project Structure
+myshell/
+├── boot.asm           # Boot-related assembly code
+├── boot.bin           # Compiled binary from assembly
+├── myshell.c          # Core shell implementation in C
+├── myshell.exe        # Compiled shell executable
+├── start_myshell.bat  # Script to launch the shell
+├── README.md
