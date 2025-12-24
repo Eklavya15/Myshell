@@ -31,6 +31,7 @@ Tools: GCC / MinGW, Batch scripting
 
 Project Structure
 myshell/
+
 ├── boot.asm           # Boot-related assembly code
 ├── boot.bin           # Compiled binary from assembly
 ├── myshell.c          # Core shell implementation in C
